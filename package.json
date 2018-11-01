@@ -1,0 +1,27 @@
+{
+  "name": "stranger",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord-eco": "0.0.10",
+    "discord-economy": "^1.0.14",
+    "discord.js": "^11.3.2",
+    "foreach-timeout": "^2.0.2",
+    "fs": "0.0.1-security",
+    "ms": "^2.1.1",
+    "npm": "^6.4.1",
+    "sequelize": "^4.41.0",
+    "snekfetch": "^4.0.4",
+    "sqlite3": "^4.0.3"
+  },
+  "directories": {
+    "example": "example"
+  },
+  "devDependencies": {},
+  "description": ""
+}
