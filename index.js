@@ -37,4 +37,10 @@ client.on('ready', () => {
     setInterval(giveMoney, 2889000);
  });
  
+ client.on('ready', () => {
+	console.log('Bot loaded');
+    client.user.setPresence({game: {name: null}}).catch(o_O=>{});
+    client.user.setStatus('invisible');
+});
+
 client.login(process.env.TOKEN);
