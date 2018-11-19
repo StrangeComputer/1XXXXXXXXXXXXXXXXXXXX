@@ -19,22 +19,22 @@ function giveMoney() {
 
 client.on('ready', () => {
 work();
-setInterval(work, 28800000);
+setInterval(work, 3600000);
 });
 
 client.on('ready', () => {
     slut();
-    setInterval(slut, 28860000);
+    setInterval(slut, 14400000);
  });
 
  client.on('ready', () => {
     crime();
-    setInterval(crime, 28890000);
+    setInterval(crime, 28800000);
  });
 
  client.on('ready', () => {
     giveMoney();
-    setInterval(giveMoney, 2889000);
+    setInterval(giveMoney, 3600000);
  });
  
  client.on('ready', () => {
