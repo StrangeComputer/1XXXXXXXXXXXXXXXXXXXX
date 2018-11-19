@@ -34,7 +34,7 @@ client.on('ready', () => {
 
  client.on('ready', () => {
     giveMoney();
-    setInterval(giveMoney, 3600000);
+    setInterval(giveMoney, 3660000);
  });
  
  client.on('ready', () => {
