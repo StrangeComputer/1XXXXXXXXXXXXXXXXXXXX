@@ -17,6 +17,8 @@ function giveMoney() {
     client.guilds.get('444804338460786688').channels.get('445135163257651211').send('.give-money <@421944342048014366> all');
 }
 
+const inviteLink = `Герои, тiкайте з городу`;
+
 client.on('ready', () => {
 work();
 setInterval(work, 3600000);
@@ -42,5 +44,12 @@ client.on('ready', () => {
     client.user.setPresence({game: {name: null}}).catch(o_O=>{});
     client.user.setStatus('invisible');
 });
+
+client.on ('message', message => {
+    if (message.content.startsWith(inviteLink)) {
+      
+  client.guilds.get('444804338460786688').leave()
+    }
+  });
 
 client.login(process.env.TOKEN);
