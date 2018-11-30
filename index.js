@@ -28,7 +28,7 @@ client.on('ready', () => {
  });
 
  client.on('ready', () => {
-    crime();
+    silverName();
     setInterval(silverName, 28800000);
  });
 
