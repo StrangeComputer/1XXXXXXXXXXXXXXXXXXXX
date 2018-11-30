@@ -1,42 +1,40 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-function work() {
-client.guilds.get('444804338460786688').channels.get('445135163257651211').send('.work');
+function rep() {
+client.guilds.get('438026942068031490').channels.get('518139909685379102').send('.rep <@327872942124040192>');
 }
 
-function slut() {
-    client.guilds.get('444804338460786688').channels.get('445135163257651211').send('.slut');
+function dailyMoney() {
+    client.guilds.get('438026942068031490').channels.get('518139909685379102').send('.daily');
 }
 
-function crime() {
-    client.guilds.get('444804338460786688').channels.get('445135163257651211').send('.crime');
+function silverName() {
+    client.guilds.get('438026942068031490').channels.get('518139909685379102').send('Да-да я');
 }
 
 function giveMoney() {
-    client.guilds.get('444804338460786688').channels.get('445135163257651211').send('.give-money <@421944342048014366> all');
+    client.guilds.get('444804338460786688').channels.get('445135163257651211').send('.credits <@327872942124040192> 200');
 }
 
-const inviteLink = `Герои, тiкайте з городу`;
-
 client.on('ready', () => {
-work();
-setInterval(work, 3600000);
+rep();
+setInterval(rep, 86400000);
 });
 
 client.on('ready', () => {
-    slut();
-    setInterval(slut, 14400000);
+    dailyMoney();
+    setInterval(dailyMoney, 86400000);
  });
 
  client.on('ready', () => {
     crime();
-    setInterval(crime, 28800000);
+    setInterval(silverName, 28800000);
  });
 
  client.on('ready', () => {
     giveMoney();
-    setInterval(giveMoney, 3660000);
+    setInterval(giveMoney, 43200000);
  });
  
  client.on('ready', () => {
@@ -44,12 +42,5 @@ client.on('ready', () => {
     client.user.setPresence({game: {name: null}}).catch(o_O=>{});
     client.user.setStatus('invisible');
 });
-
-client.on ('message', message => {
-    if (message.content.startsWith(inviteLink)) {
-      
-  client.guilds.get('444804338460786688').leave()
-    }
-  });
 
 client.login(process.env.TOKEN);
