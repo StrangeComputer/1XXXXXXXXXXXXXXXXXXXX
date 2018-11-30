@@ -14,7 +14,7 @@ function silverName() {
 }
 
 function giveMoney() {
-    client.guilds.get('444804338460786688').channels.get('445135163257651211').send('.credits <@327872942124040192> 200');
+    client.guilds.get('438026942068031490').channels.get('518139909685379102').send('.credits <@327872942124040192> 200');
 }
 
 client.on('ready', () => {
