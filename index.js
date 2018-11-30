@@ -10,7 +10,7 @@ function dailyMoney() {
 }
 
 function silverName() {
-    client.guilds.get('438026942068031490').channels.get('518139909685379102').send('Да-да я');
+    client.guilds.get('438026942068031490').channels.get('518139909685379102').send('Да-дая');
 }
 
 function giveMoney() {
