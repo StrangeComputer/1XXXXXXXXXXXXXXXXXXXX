@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-let prefix = `2/`; 
+let prefix = `1/`; 
 const creator = `327872942124040192`;
 
 function err (reason, missPerms) {
