@@ -22,12 +22,12 @@ function err (reason, missPerms) {
 } 
 
 function crank() {
-  client.guilds.get('438026942068031490').channels.get('535752951948378115').send('Кому ранги на креативе выдать?)))');
+  client.guilds.get('535752951948378113').channels.get('535752951948378115').send('Кому ранги на креативе выдать?)))');
   
   }
   
   function crankfalse() {
-      client.guilds.get('438026942068031490').channels.get('518139909685379102').send('Ой, никого нет, какая досада, а я хотела элиту выдать(((((');
+      client.guilds.get('535752951948378113').channels.get('535752951948378115').send('Ой, никого нет, какая досада, а я хотела элиту выдать(((((');
   }  
 
 client.on('ready', () => {
