@@ -60,8 +60,8 @@ client.on('message', message => {
 if (message.content.startsWith("-> slap <@559331913005924355>")){
     message.channel.startTyping();
     let matgen = [`херокрушитель бомжеватый`,`быдлоголовик настольный`,`килозад педантичный`,`губокрыс пикантный`,`киберпотам деспотичный`,`глистогенерал сопливый`,`дристогриль агрессивная`,`нанопаук въебанный`,`стремноман сучарный`,`членопуз глупый`,`пиздооксидант помешанный`,`говножитель опрометчивый`,`крысотехник кирпичный`,`залуподроид тропический`];
-    message.channel.send("ах ты " + matgen);
-    message.channel.send(`-> slap ${message.author}`)
+    message.channel.send("ах ты " + matgen)
+    message.channel.send("-> slap" + "<@" + message.author.id + ">");
     message.channel.stopTyping(true)
 }
 
@@ -83,7 +83,7 @@ if(command === ""){
     if(message.member.roles.has('536309904261251110')) return message.author.send("Ох простите меня, я не специально");
     let authcode = [`очень жаль, но ты мудила`,`ну ты и объебок`,`а ты хуесос однако `,`ты похуже Гитлера`,`шкила, та ещё шкила..`,`ебать ты горячий как в печке`,`у тебя аутизм?`,`я тут ебалась, а ты помешал`,`ну и жирный, ахах`,`ты отброс? ну давай отбросим эти все факты и поедем ко мне`,`вы подо мной`,`я бы с тобой на парад эщкере не пошла`,`долбаеб обращается ко мне, помогите`,`чёртила ходячья`,`ты моя ссанина`];
     let rac = Math.floor(Math.random() * authcode.length);
-    message.channel.send(`${message.author} ${authcode[rac]}`);
+    message.channel.send("<@" + message.author.id + ">" +`${authcode[rac]}`);
 }
 
 if (command === 'eval') {
