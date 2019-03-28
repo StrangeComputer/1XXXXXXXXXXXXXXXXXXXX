@@ -57,7 +57,7 @@ client.on('message', message => {
     })
     if (prefix === false) return;
 
-if (message.content.startsWith(`->slap <@559331913005924355>`)){
+if (message.content(`->slap <@559331913005924355>`)){
     message.channel.startTyping();
     let matgen = [`херокрушитель бомжеватый`,`быдлоголовик настольный`,`килозад педантичный`,`губокрыс пикантный`,`киберпотам деспотичный`,`глистогенерал сопливый`,`дристогриль агрессивная`,`нанопаук въебанный`,`стремноман сучарный`,`членопуз глупый`,`пиздооксидант помешанный`,`говножитель опрометчивый`,`крысотехник кирпичный`,`залуподроид тропический`];
     message.channel.send("ах ты " + matgen)
@@ -74,6 +74,10 @@ if (message.content.startsWith(`->slap <@559331913005924355>`)){
     message.delete();
     message.channel.send(args.join(" ")).catch(() => {return err('Не указано сообщение')});
 }
+
+if (command === 'ранг'){
+message.channel.send("Выдала тебе элиту, проверяй на сервере :)");
+};
 
 if (command === "setav"){
   client.user.setAvatar('https://cdn.discordapp.com/attachments/475264609230782464/514493999634186250/72ed55cec194dbe359fa755a2380dd97.jpg');
