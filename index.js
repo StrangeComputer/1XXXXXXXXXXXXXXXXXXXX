@@ -57,11 +57,11 @@ client.on('message', message => {
     })
     if (prefix === false) return;
 
-if (message.content.startsWith("-> slap <@559331913005924355>")){
+if (message.content.startsWith(`->slap <@559331913005924355>`)){
     message.channel.startTyping();
     let matgen = [`херокрушитель бомжеватый`,`быдлоголовик настольный`,`килозад педантичный`,`губокрыс пикантный`,`киберпотам деспотичный`,`глистогенерал сопливый`,`дристогриль агрессивная`,`нанопаук въебанный`,`стремноман сучарный`,`членопуз глупый`,`пиздооксидант помешанный`,`говножитель опрометчивый`,`крысотехник кирпичный`,`залуподроид тропический`];
     message.channel.send("ах ты " + matgen)
-    message.channel.send("-> slap" + "<@" + message.author.id + ">");
+    message.channel.send(`->slap` + "<@" + message.author.id + ">");
     message.channel.stopTyping(true)
 }
 
@@ -80,14 +80,14 @@ if (command === "setav"){
 }
 
 if(command === ""){
-    if(message.member.roles.has('536309904261251110')) return message.author.send("Ох простите меня, я не специально");
+    if(message.member.roles.has('536309904261251110')) return message.channel.send("Администрация, я не хотела, нас с Хоней заставили сосать");
     let authcode = [`очень жаль, но ты мудила`,`ну ты и объебок`,`а ты хуесос однако `,`ты похуже Гитлера`,`шкила, та ещё шкила..`,`ебать ты горячий как в печке`,`у тебя аутизм?`,`я тут ебалась, а ты помешал`,`ну и жирный, ахах`,`ты отброс? ну давай отбросим эти все факты и поедем ко мне`,`вы подо мной`,`я бы с тобой на парад эщкере не пошла`,`долбаеб обращается ко мне, помогите`,`чёртила ходячья`,`ты моя ссанина`];
     let rac = Math.floor(Math.random() * authcode.length);
-    message.channel.send("<@" + message.author.id + ">" +`${authcode[rac]}`);
+    message.channel.send("<@" + message.author.id + "> " +`${authcode[rac]}`);
 }
 
 if (command === 'eval') {
-  if (message.author.id !== creator) return message.channel.send('Доступ запрещен.');
+  if (message.author.id !== creator) return message.channel.send('Что-что?');
   const code = args.join(" ").replace(/client\.token|client\[.token.\]/ig, 'process.env.TOKEN');        
   const token = client.token.split("").join("[^]{0,2}");
   const rev = client.token.split("").reverse().join("[^]{0,2}");
