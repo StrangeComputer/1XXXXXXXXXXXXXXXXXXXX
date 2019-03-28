@@ -37,7 +37,6 @@ client.on('ready', () => {
     console.log('Краткая информация:');
     console.log('- Авторизован как ' + client.user.tag);
     console.log('//------------------//');
-    client.user.setPresence({game: {name: null}}).catch(o_O=>{});
     client.user.setStatus('idle');
     crank();
     setInterval(crank, 86400000);
@@ -49,7 +48,7 @@ client.on('ready', () => {
 client.on('message', message => {
   
     if (message.author.bot) return;
-    let prefixes = ['Лина ', 'Лина', 'Милашка', 'Милашка ', 'Лина, ', 'Милашка, ', 'Лина,', 'Милашка,', 'MilaFFka ', 'MilaFFka, ', 'MilaFFka', '<@559331913005924355>'];
+    let prefixes = ['Лина ', 'Лина', 'Милашка', 'Милашка ', 'Лина, ', 'Милашка, ', 'Лина,', 'Милашка,', 'MilaFFka ', 'MilaFFka, ', 'MilaFFka', '<@559331913005924355>',''];
     let prefix = false;
     prefixes.forEach(prefix_ => {
         if (message.content.startsWith(prefix_)) {
@@ -58,11 +57,20 @@ client.on('message', message => {
     })
     if (prefix === false) return;
 
+if (message.content.startsWith("-> slap <@559331913005924355>")){
+    message.channel.startTyping();
+    let matgen = [`херокрушитель бомжеватый`,`быдлоголовик настольный`,`килозад педантичный`,`губокрыс пикантный`,`киберпотам деспотичный`,`глистогенерал сопливый`,`дристогриль агрессивная`,`нанопаук въебанный`,`стремноман сучарный`,`членопуз глупый`,`пиздооксидант помешанный`,`говножитель опрометчивый`,`крысотехник кирпичный`,`залуподроид тропический`];
+    message.channel.send("ах ты " + matgen);
+    message.channel.send(`-> slap ${message.author}`)
+    message.channel.stopTyping(true)
+}
+
+
   if(message.content.indexOf(prefix) !== 0) return;
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
-  if (command === 'say') {
+  if (command === 'скажи') {
     message.delete();
     message.channel.send(args.join(" ")).catch(() => {return err('Не указано сообщение')});
 }
@@ -71,7 +79,7 @@ if (command === "setav"){
   client.user.setAvatar('https://cdn.discordapp.com/attachments/475264609230782464/514493999634186250/72ed55cec194dbe359fa755a2380dd97.jpg');
 }
 
-if(command === ""){
+if(command === "милашка"){
     if(message.member.roles.has('536309904261251110')) return message.author.send("Ох простите меня, я не специально");
     let authcode = [`очень жаль, но ты мудила`,`ну ты и объебок`,`а ты хуесос однако `,`ты похуже Гитлера`,`шкила, та ещё шкила..`,`ебать ты горячий как в печке`,`у тебя аутизм?`,`я тут ебалась, а ты помешал`,`ну и жирный, ахах`,`ты отброс? ну давай отбросим эти все факты и поедем ко мне`,`вы подо мной`,`я бы с тобой на парад эщкере не пошла`,`долбаеб обращается ко мне, помогите`,`чёртила ходячья`,`ты моя ссанина`];
     let rac = Math.floor(Math.random() * authcode.length);
